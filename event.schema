@@ -1,0 +1,44 @@
+
+mysql> use event
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> desc tbl_event;
++--------------+--------------+------+-----+---------------------+----------------+
+| Field        | Type         | Null | Key | Default             | Extra          |
++--------------+--------------+------+-----+---------------------+----------------+
+| e_id         | int(11)      | NO   | PRI | NULL                | auto_increment |
+| e_name       | varchar(100) | NO   |     | NULL                |                |
+| e_venue      | varchar(250) | YES  |     | NULL                |                |
+| e_showtimes  | varchar(250) | YES  |     | NULL                |                |
+| e_showmaxs   | varchar(60)  | YES  |     | -                   |                |
+| e_showavails | varchar(60)  | YES  |     | -                   |                |
+| e_quota      | int(11)      | YES  |     | 1                   |                |
+| e_date       | date         | YES  |     | NULL                |                |
+| e_admins     | varchar(200) | YES  |     | nkundhapu,arungacha |                |
+| e_created    | timestamp    | NO   |     | CURRENT_TIMESTAMP   |                |
++--------------+--------------+------+-----+---------------------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> desc tbl_checkin;
++----------------+--------------+------+-----+-------------------+-------+
+| Field          | Type         | Null | Key | Default           | Extra |
++----------------+--------------+------+-----+-------------------+-------+
+| e_id           | int(11)      | NO   |     | NULL              |       |
+| c_empid        | int(11)      | YES  |     | NULL              |       |
+| c_uid          | varchar(100) | NO   |     | NULL              |       |
+| c_uname        | varchar(100) | YES  |     | NULL              |       |
+| c_ans          | varchar(5)   | YES  |     | -                 |       |
+| c_npers        | int(11)      | YES  |     | 0                 |       |
+| c_showtime     | varchar(20)  | YES  |     | -                 |       |
+| c_pickup       | varchar(5)   | YES  |     | -                 |       |
+| c_pickup_point | varchar(100) | YES  |     | -                 |       |
+| c_drop         | varchar(5)   | YES  |     | -                 |       |
+| c_drop_point   | varchar(100) | YES  |     | -                 |       |
+| c_date         | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
++----------------+--------------+------+-----+-------------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> 
+
