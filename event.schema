@@ -1,4 +1,3 @@
-
 mysql> use event
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
@@ -16,7 +15,7 @@ mysql> desc tbl_event;
 | e_showavails | varchar(60)  | YES  |     | -                   |                |
 | e_quota      | int(11)      | YES  |     | 1                   |                |
 | e_date       | date         | YES  |     | NULL                |                |
-| e_admins     | varchar(200) | YES  |     | nkundhapu,arungacha |                |
+| e_admins     | varchar(200) | YES  |     | admin1,admin2 |                |
 | e_created    | timestamp    | NO   |     | CURRENT_TIMESTAMP   |                |
 +--------------+--------------+------+-----+---------------------+----------------+
 10 rows in set (0.00 sec)
